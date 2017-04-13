@@ -21,7 +21,7 @@ beverage$SEVENUP[which(is.na(beverage$SEVENUP))] <- 0
 #       4    0     1      0    0       0
 #       5    0     0      0    0       0
 
-# remove lines with *******************************************
+# remove lines with NA ****************************************
 # numb.obs COKE PEPSI SPRITE  TAB  SEVENUP
 #       1    1     1     NA    0       1
 #       2   NA     1      0   NA      NA
@@ -56,4 +56,23 @@ beverage$SEVENUP[which(is.na(beverage$SEVENUP))] <- mean(beverage$SEVENUP, na.rm
 #       4  0.0     1   0.00    0    0.00
 #       5  0.0     1   0.00    0    0.00
 
+# replace -9999 by NA *****************************************
+# numb.obs   COKE     PEPSI     SPRITE      TAB        SEVENUP
+#       1      1        1        -9999       0          1
+#       2     -9999     1         0          -9999      -9999
+#       3      1        1         1          0          0
+#       4      0        1         0          0          0
+#       5      0       -9999      0          0          0
 
+beverage$COKE[beverage$COKE==-9999] <- NA
+beverage$PEPSI[beverage$PEPSI==-9999] <- NA
+beverage$SPRITE[beverage$SPRITE==-9999] <- NA
+beverage$TAB[beverage$TAB==-9999] <- NA
+beverage$SEVENUP[beverage$SEVENUP==-9999] <- NA
+
+# numb.obs COKE PEPSI SPRITE  TAB  SEVENUP
+#       1    1     1     NA    0       1
+#       2   NA     1      0   NA      NA
+#       3    1     1      1    0       0
+#       4    0     1      0    0       0
+#       5    0    NA      0    0       0
