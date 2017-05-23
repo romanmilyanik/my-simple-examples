@@ -1,0 +1,18 @@
+library(lubridate)
+date <- "2009-10-01"
+
+ymd(date) - days(5)
+# [1] "2009-09-26"
+
+ymd(date) - months(5)
+# [1] "2009-05-01"
+
+ymd(date) - years(5)
+# [1] "2004-10-01"
+
+ymd(date) - years(1) - months(2) - days(3)
+# [1] "2008-07-29"
+
+
+
+CONTRACT$generated <- as.Date(ymd(CONTRACT$generated_date) - years(1))
