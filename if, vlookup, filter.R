@@ -97,8 +97,9 @@ df$credit_amount <- as.factor(ifelse(df$credit_amount<=2500,'0-2500',
 library(dplyr)
 KSrow <- data.frame(filter(score_table, groups == "good"))
 
-
-
+SUBJECT <- data.frame(filter(SUBJECT, len == 10, requestid != "0000000000", requestid != "1111111111"))
+SUBJECT <- data.frame(filter(SUBJECT, requestid %in% cash$INN))
+SUBJECT <- data.frame(filter(SUBJECT, !requestid %in% occup$INN))
 
 
 
