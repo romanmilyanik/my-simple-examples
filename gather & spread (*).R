@@ -1,22 +1,22 @@
 library(tidyr)
 library(tibble)
 
-taba <- tibble(name = c("Roman", "Zoryana", "Taras"),
+taba <- tibble(name = c("Istanbul", "Kyiv", "Lviv"),
                `2016` = c(26, 23, 24),
                `2017` = c(27, 24, 25))
- #    name   `2016` `2017`
- #   Roman     26     27
- # Zoryana     23     24
- #   Taras     24     25
+ #    name      `2016` `2017`
+ #   Istanbul     26     27
+ #   Kyiv         23     24
+ #   Lviv         24     25
 
 taba_1 <- gather(taba, `2016`, `2017`, key = "year", value = "cases")
- #    name   year   cases
- #   Roman   2016    26
- # Zoryana   2016    23
- #   Taras   2016    24
- #   Roman   2017    27
- # Zoryana   2017    24
- #   Taras   2017    25
+ #    name      year   cases
+ #   Istanbul   2016    26
+ #   Kyiv       2016    23
+ #   Lviv       2016    24
+ #   Istanbul   2017    27
+ #   Kyiv       2017    24
+ #   Lviv       2017    25
 
 ### ### --- ### ### --- ### ### --- ### ### --- ### ### --- ### ### --- ### ### --- ### ### --- ### ### --- ### ### --- ### ### --- ### ### --- ### ### --- ### ### ---
 
