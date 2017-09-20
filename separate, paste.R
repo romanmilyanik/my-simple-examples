@@ -2,8 +2,6 @@ library(tibble)
 library(tidyr)
 
 ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ###
-### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ###
-### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ### SEPARATE ###
 
 taba <- tibble(id = c("1!", "2!", "3!"),
                country = c("Ukraine", "USA", "Canada"),
@@ -58,8 +56,6 @@ taba_new_2 <- separate(taba_new, pat, into = c("one", "two", "three"), sep = "/"
 #  2!      USA    F:     milyanik    USA
 #  3!   Canada    F:     milyanik    CAN
 
-### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ###
-### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ###
 ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ### UNITE ###
 
 taba <- tibble(id = c("1!", "2!", "3!"),
