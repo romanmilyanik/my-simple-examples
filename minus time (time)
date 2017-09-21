@@ -14,5 +14,4 @@ ymd(date) - years(1) - months(2) - days(3)
 # [1] "2008-07-29"
 
 
-
 CONTRACT$generated <- as.Date(ymd(CONTRACT$generated_date) - years(1))
